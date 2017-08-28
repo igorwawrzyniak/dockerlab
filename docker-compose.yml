@@ -1,0 +1,15 @@
+version: '2'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=haslo
+  cphpadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8070:80
+  cmyapp:
+    image: mojphp:2
+    ports:
+      - 8071:80
+
